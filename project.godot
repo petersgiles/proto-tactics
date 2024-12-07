@@ -15,6 +15,13 @@ run/main_scene="res://Scenes/Game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Util="*res://Util.gd"
+Global="*res://Global.gd"
+SignalBus="*res://SignalBus.gd"
+Refs="*res://Refs.gd"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
