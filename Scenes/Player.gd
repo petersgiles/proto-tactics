@@ -1,8 +1,5 @@
 @tool
-extends Area2D
+extends Node2D
 
 @export_group("Player Properties")
-@export var frame: int = 0
-
-func _ready():
-	$AnimatedSprite2D.frame = frame
+@export var max_move: int = 5

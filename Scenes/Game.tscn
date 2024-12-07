@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=4 uid="uid://gn8y0m2mwpvk"]
+[gd_scene load_steps=6 format=4 uid="uid://gn8y0m2mwpvk"]
 
 [ext_resource type="Texture2D" uid="uid://ofhy7kwics1w" path="res://Assets/Scribble Dungeon/tilesheet@2.png" id="3_w25ev"]
+[ext_resource type="PackedScene" uid="uid://bvru4kiyv0iy6" path="res://Scenes/Character.tscn" id="3_ymrj6"]
 [ext_resource type="PackedScene" uid="uid://o8m1xv5qv1y" path="res://Scenes/Player.tscn" id="4_yf0e2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y655p"]
@@ -166,6 +167,12 @@ tile_set = SubResource("TileSet_hkfgt")
 [node name="Player" parent="Players" instance=ExtResource("4_yf0e2")]
 position = Vector2(449, 435)
 
+[node name="Character" parent="Players/Player" instance=ExtResource("3_ymrj6")]
+position = Vector2(15, -73)
+
 [node name="Player2" parent="Players" instance=ExtResource("4_yf0e2")]
 position = Vector2(192, 179)
-frame = 1
+
+[node name="Character" parent="Players/Player2" instance=ExtResource("3_ymrj6")]
+position = Vector2(19, -73)
+my_class = 2

@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvru4kiyv0iy6"]
+
+[ext_resource type="Script" path="res://Scenes/Character.gd" id="1_manly"]
+[ext_resource type="Texture2D" uid="uid://bgoco2sgdbxbs" path="res://Assets/Scribble Dungeon/Characters/green_character.png" id="2_pdsg3"]
+[ext_resource type="Texture2D" uid="uid://dyssbdlqfh0t" path="res://Assets/Scribble Dungeon/Characters/red_character.png" id="3_3ncy6"]
+[ext_resource type="Texture2D" uid="uid://8lpeof3lcu58" path="res://Assets/Scribble Dungeon/Characters/purple_character.png" id="4_h25xw"]
+[ext_resource type="Texture2D" uid="uid://cnn3vdftuanqh" path="res://Assets/Scribble Dungeon/Characters/yellow_character.png" id="5_f8bax"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gktw1"]
+radius = 32.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_edsxg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pdsg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3ncy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h25xw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f8bax")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Character" type="Area2D"]
+script = ExtResource("1_manly")
+my_class = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gktw1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_edsxg")
+frame = 1
