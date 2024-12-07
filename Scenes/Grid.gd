@@ -2,7 +2,7 @@ extends Node2D
 
 @export var grid_width: int = 10
 @export var grid_height: int = 10
-@export var tile_size: int = 64
+@export var tile_size: int = 128
 @export var tile_scene: PackedScene  # Drag your Tile.tscn scene here in the Inspector
 
 func _ready():
